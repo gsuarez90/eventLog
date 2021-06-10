@@ -14,16 +14,16 @@ import win32evtlog # requires pywin32 pre-installed
 
 port = 465 #for SSL
 smtp_server = "smtp.gmail.com"
-sender_email = "george.suarez@atoptics.com" #enter your address
-receiver_email = "george.suarez@atoptics.com" #enter receiver address
+sender_email = "yours@email.com" #enter your address
+receiver_email = "theirs@email.com" #enter receiver address
 #receiver_email_2 = "" #define as many email addresses as needed
-password = "dfgTRE345%$#"
+password = "*******"
 
 #Write your message here
 message = """ \                                     
 Subject: Power Failure
 
-The power has failed at AdTech Photonics. """
+The power has failed at your_company. """
 
 context = ssl.create_default_context()
 server = 'localhost' # name of the target computer to get event logs
