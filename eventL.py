@@ -17,7 +17,7 @@ smtp_server = "smtp.gmail.com"
 sender_email = "yours@email.com" #enter your address
 receiver_email = "theirs@email.com" #enter receiver address
 #receiver_email_2 = "" #define as many email addresses as needed
-password = "*******"
+password = "*******" #enter in sender's email password
 
 #Write your message here
 message = """ \                                     
@@ -33,11 +33,13 @@ flags = win32evtlog.EVENTLOG_BACKWARDS_READ|win32evtlog.EVENTLOG_SEQUENTIAL_READ
 total = win32evtlog.GetNumberOfEventLogRecords(hand)
 sys = "Power Failure"
 
-with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+#send email
+with smtplib.SMTP_SSL(smtp_server, port, context=context) as server: 
                 server.login(sender_email, password)
                 server.sendmail(sender_email, receiver_email, message)
                 #server.sendmail(sender_email, receiver_email_2, message)
 
+#look for specific event ID/s
 while True:
      events = win32evtlog.ReadEventLog(hand, flags,0)
      if events:
@@ -52,7 +54,7 @@ while True:
                     print ('Event Type:', event.EventType)
 
             
-        
+        #save to .txt file
             with open('glitch.txt', 'a') as outfile:
                 
                 if event.EventID == 41 and event.SourceName == "Microsoft-Windows-Kernel-Power":
