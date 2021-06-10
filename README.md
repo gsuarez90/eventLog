@@ -21,7 +21,7 @@ Why This Project Is Useful --
   
   This project can be useful for different reasons such as alerting specific personnel 
   that there has been a power loss, and if certain equipment needs to be properly reset in person 
-  there will be less time loss to preserve that equipments functionality. 
+  there will be less time loss to preserve that equipment's functionality. 
   
   Other uses can include automatically logging events that have more to do with your computer security,
   for example, failed login attempts to your device, unrecognized new user profiles, or event log clearing
