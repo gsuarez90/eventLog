@@ -5,7 +5,8 @@ What This Project Does --
   This project can parse an event ID and its details from Windows Event Viewer.
   The user can edit which ID they would like to call. If a user wants to call more than one
   event, adding nested 'for loops' inside the first one will work. After the program calls the 
-  event ID/s it then outputs the event to a .txt file.
+  event ID/s it then outputs the event to a .txt file. 
+  It also sends out an email when the program is triggered. 
   
   I configured this program to run automatically as a .bat file in the event that there is a sudden power loss.
   In Windows Event Viewer, the system logs an ID (41) for this event. This most likely happens when the power 
