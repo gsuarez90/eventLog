@@ -55,16 +55,18 @@ while True:
 
             
         #save to .txt file
-            with open('glitch.txt', 'a') as outfile:
+             with open('glitch.txt', 'a') as outfile:
                 
                 if event.EventID == 41 and event.SourceName == "Microsoft-Windows-Kernel-Power":
+                    
                     outfile.write('%s\n' % sys)
-                    outfile.write('%s' % "Event ID: ")
-                    outfile.write('%s\n' % event.EventID)
-                    outfile.write('%s' % "Time Stamp: ")
-                    outfile.write('%s\n' % event.TimeGenerated)
-                    outfile.write('%s' % "Source Name: ")
-                    outfile.write('%s\n' % event.SourceName)
+                    
+                    outfile.write('Event ID: %s\n' % event.EventID )
+                    
+                    outfile.write('Time Stamp: %s\n' % event.TimeGenerated)
+                    
+                    outfile.write('Source Name: %s\n' % event.SourceName)
+                   
                     outfile.write('\n')
          
             
